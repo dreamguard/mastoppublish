@@ -1,0 +1,26 @@
+V 1.2 (6-11-2016) 
+    Rework for Xoops 2.5.8 (dreamguard)
+    Support for PHP 7 (dreamguard)
+
+V 1.1 (18/06/2007)
+
+    BUG in comment_new.php file that prevented the operation in xoops 2.0.15;
+    BUG quotes from the menu and title;
+    Positioning submenus, which were displayed under the Mastop Go2 and flash files;
+    Visual editor TinyMCE updated to the latest stable version (2.1.1.1);
+    Possibility to define an author for each page (registered user);
+    Option possibility to edit, delete, create sub-pages for the authors of the contents;
+    Button "My Pages", which displays all pages assigned / created by the logged in user;
+    Preferences: "Authors can edit?" "Authors can create sub-pages" and "Authors can delete?";
+    Block "Related Pages Menu";
+    Ability to create content as an "external link" that will put links to other pages;
+    Option in the preferences "Use white background in the editor?", For those who have dark background in the subject and wish that the publisher does not "inherit" the theme of the fund;
+    In preference a "Home ID," to be called when the Mastop Publish is accessed directly from the menu (without a "TAC" assigned);
+    Ability to clone pages already created;
+    Button to group and ungroup pages;
+    Option cloning of the blocks, with this feature you can have as many menus as needed;
+    Button switches the editor between text area and visual editor;
+
+V 1.0
+
+    Initial Release

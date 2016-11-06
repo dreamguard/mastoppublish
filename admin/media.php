@@ -1,11 +1,11 @@
 <?php
 ### =============================================================
-### Mastop InfoDigital - Paixão por Internet
+### Mastop InfoDigital - PaixÃ£o por Internet
 ### =============================================================
-### Arquivo para manipulação de Mídias
+### Arquivo para manipulaÃ§Ã£o de MÃ­dias
 ### =============================================================
 ### Developer: Fernando Santos (topet05), fernando@mastop.com.br
-### Copyright: Mastop InfoDigital © 2003-2006
+### Copyright: Mastop InfoDigital Â© 2003-2006
 ### -------------------------------------------------------------
 ### www.mastop.com.br
 ### =============================================================
@@ -157,9 +157,9 @@ switch ($op) {
 		echo (!empty($erro)) ? $erro."<br />" : '';
 		$mpu_med_media = new mpu_med_media();
 		$med_10_id = (empty($med_10_id)) ? null : $med_10_id;
-		// Opções
+		// OpÃ§Ãµes
 		$c['op'] = 'media';
-		$c['form'] = 0; // 0 para exibir os registros em modo visualização, 1 em modo edição
+		$c['form'] = 0; // 0 para exibir os registros em modo visualizaÃ§Ã£o, 1 em modo ediÃ§Ã£o
 		$c['checks'] = 1;
 
 		$c['nome'][1] = 'med_10_id';
@@ -210,7 +210,7 @@ switch ($op) {
 		$c['botoes'][2]['imagem'] = 'images/deletar.gif';
 		$c['botoes'][2]['texto'] = MPU_ADM_DMEDIA;
 
-		// Tradução
+		// TraduÃ§Ã£o
 		$c['lang']['titulo'] = MPU_ADM_MEDIATITULO;
 		$c['lang']['filtros'] = MPU_ADM_FILTROS;
 		$c['lang']['exibir'] = MPU_ADM_EXIBIR;

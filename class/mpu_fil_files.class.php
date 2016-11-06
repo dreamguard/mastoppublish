@@ -16,7 +16,7 @@ class mpu_fil_files extends mpu_geral {
 
 
     public function __construct($id = null) {
-		$this->db =& XoopsDatabaseFactory::getDatabaseConnection();
+		$this->db = XoopsDatabaseFactory::getDatabaseConnection();
 		$this->tabela = $this->db->prefix(MPU_MOD_TABELA2);
 		$this->id = "fil_10_id";
 		$this->initVar("fil_10_id", XOBJ_DTYPE_INT);

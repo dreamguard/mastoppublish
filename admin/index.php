@@ -1,11 +1,11 @@
 <?php
 ### =============================================================
-### Mastop InfoDigital - Paixão por Internet
+### Mastop InfoDigital - PaixÃ£o por Internet
 ### =============================================================
-### Admin do Módulo
+### Admin do MÃ³dulo
 ### =============================================================
 ### Developer: Fernando Santos (topet05), fernando@mastop.com.br
-### Copyright: Mastop InfoDigital © 2003-2006
+### Copyright: Mastop InfoDigital Â© 2003-2006
 ### -------------------------------------------------------------
 ### www.mastop.com.br
 ### =============================================================

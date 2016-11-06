@@ -15,27 +15,27 @@
 // Dados do Módulo
 $modversion                 = array();
 $modversion['name'] 		= MPU_MOD_NOME;
-$modversion['version'] 		= 1.1;
+$modversion['version'] 		= 1.2;
 $modversion['description'] 	= MPU_MOD_DESC;
 
-$modversion['author']           = 'Fernando Santos (aka topet05)';
+$modversion['author']           = 'Fernando Santos, Daniel Wilden';
 $modversion['credits']          = 'Daniel Wilden';
 $modversion['help']             = 'page=help';
 //$modversion['help']           = "help.html";
 $modversion['license']          = 'GNU GPL 2.0 or later';
 $modversion['license_url']      = 'www.gnu.org/licenses/gpl-2.0.html/';
 //$modversion['official']         = 0;
-$modversion['image']            = "images/mpub_mpublish_logo.gif";
+$modversion['image']            = "assets/images/logo.png";
 $modversion['dirname']          = basename(__DIR__);
 $modversion['dirmoduleadmin']   = '/Frameworks/moduleclasses/moduleadmin';
 $modversion['icons16']          = '../../Frameworks/moduleclasses/icons/16';
 $modversion['icons32']          = '../../Frameworks/moduleclasses/icons/32';
 
 //about
-$modversion['module_status']       = 'Final';
-$modversion['release_date']        = '2016/02/14';
-$modversion['module_website_url']  = 'http://www.xoops.org/';
-$modversion['module_website_name'] = 'XOOPS';
+$modversion['module_status']       = 'Beta';
+$modversion['release_date']        = '2016/11/06';
+$modversion['module_website_url']  = 'www.mastop.com.br';
+$modversion['module_website_name'] = 'Mastop Internet Development';
 $modversion['min_php']             = '5.3.7';
 $modversion['min_xoops']           = '2.5.8';
 $modversion['min_admin']           = '1.1';

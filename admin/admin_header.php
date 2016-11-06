@@ -1,11 +1,11 @@
 <?php
 ### =============================================================
-### Mastop InfoDigital - Paixão por Internet
+### Mastop InfoDigital - PaixÃ£o por Internet
 ### =============================================================
-### Header com includes padrões para a Admin do Módulo
+### Header com includes padrÃµes para a Admin do MÃ³dulo
 ### =============================================================
 ### Developer: Fernando Santos (topet05), fernando@mastop.com.br
-### Copyright: Mastop InfoDigital © 2003-2006
+### Copyright: Mastop InfoDigital Â© 2003-2006
 ### -------------------------------------------------------------
 ### www.mastop.com.br
 ### =============================================================
@@ -21,7 +21,7 @@ global $xoopsModule;
 $thisModuleDir = $GLOBALS['xoopsModule']->getVar('dirname');
 
 //if common.php file exist
-include_once(XOOPS_ROOT_PATH . '/modules/mastop_publish/include/common.php');
+include_once(XOOPS_ROOT_PATH . '/modules/mastoppublish/include/common.php');
 
 if ( file_exists("../language/".$xoopsConfig['language']."/modinfo.php") ) {
 	include_once("../language/".$xoopsConfig['language']."/modinfo.php");

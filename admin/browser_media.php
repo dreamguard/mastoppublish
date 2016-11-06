@@ -1,12 +1,12 @@
 <?PHP
 ### =============================================================
-### Mastop InfoDigital - Paixão por Internet
+### Mastop InfoDigital - PaixÃ£o por Internet
 ### =============================================================
-### Arquivo responsável pela integração do Cadastro de Mídia com
+### Arquivo responsÃ¡vel pela integraÃ§Ã£o do Cadastro de MÃ­dia com
 ### o TinyMCE
 ### =============================================================
 ### Developer: Fernando Santos (topet05), fernando@mastop.com.br
-### Copyright: Mastop InfoDigital © 2003-2006
+### Copyright: Mastop InfoDigital Â© 2003-2006
 ### -------------------------------------------------------------
 ### www.mastop.com.br
 ### =============================================================

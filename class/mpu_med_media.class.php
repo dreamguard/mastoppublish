@@ -15,7 +15,7 @@ include_once XOOPS_ROOT_PATH."/modules/".MPU_MOD_DIR."/class/mpu_geral.class.php
 class mpu_med_media extends mpu_geral {
 	
     public function __construct($id = null) {
-		$this->db =& XoopsDatabaseFactory::getDatabaseConnection();
+		$this->db = XoopsDatabaseFactory::getDatabaseConnection();
 		$this->tabela = $this->db->prefix(MPU_MOD_TABELA3);
 		$this->id = "med_10_id";
 		$this->initVar("med_10_id", XOBJ_DTYPE_INT);

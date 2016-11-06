@@ -1,11 +1,11 @@
 <?php
 ### =============================================================
-### Mastop InfoDigital - Paixão por Internet
+### Mastop InfoDigital - PaixÃ£o por Internet
 ### =============================================================
-### Manutenção Individual de Blocos e Grupos
+### ManutenÃ§Ã£o Individual de Blocos e Grupos
 ### =============================================================
 ### Developer: Fernando Santos (topet05), fernando@mastop.com.br
-### Copyright: Mastop InfoDigital © 2003-2007
+### Copyright: Mastop InfoDigital Â© 2003-2007
 ### -------------------------------------------------------------
 ### www.mastop.com.br
 ### =============================================================

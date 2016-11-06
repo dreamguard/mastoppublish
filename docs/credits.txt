@@ -1,0 +1,4 @@
+Credits
+===============
+Rework for Xoops 2.5.8 by Daniel Wilden
+

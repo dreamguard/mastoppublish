@@ -14,10 +14,10 @@ global $xoopsConfig;
  * Mastop Publish library path
  */
 if (!defined('MPU_URL')) {
-    define('MPU_URL', XOOPS_URL . '/modules/mastop_publish/');
+    define('MPU_URL', XOOPS_URL . '/modules/mastoppublish/');
 }
 if (!defined('MPU_ROOT_PATH')) {
-    define('MPU_ROOT_PATH', XOOPS_ROOT_PATH . '/modules/mastop_publish/');
+    define('MPU_ROOT_PATH', XOOPS_ROOT_PATH . '/modules/mastoppublish/');
 }
 if (!defined('MPU_IMAGES_URL')) {
     define('MPU_IMAGES_URL', MPU_URL . 'assets/images/');
