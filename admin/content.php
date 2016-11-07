@@ -18,16 +18,19 @@ $indexAdmin = new ModuleAdmin();
 $op = isset($_REQUEST['op']) ? $_REQUEST['op'] : (isset($_REQUEST['id']) ? 'listar_editar' : 'listar');
 $mpb_10_id = isset($_REQUEST['mpb_10_id']) ? $_REQUEST['mpb_10_id'] : 0;
 
-$mastopcontent_handler = xoops_getModuleHandler('content');
+$mastoppublishcontent_handler = xoops_getModuleHandler('content');
 
 switch ($op) {
     case "novo":
-        $mpu_classe = new mpu_mpb_mpublish($mpb_10_id);
+        /*$mpu_classe = new mpu_mpb_mpublish($mpb_10_id);
         $cfi_classe = new mpu_cfi_contentfiles();
         $form['titulo'] = MPU_ADM_NOVO;
-        $form['op'] = "salvar";
-        include XOOPS_ROOT_PATH."/modules/".MPU_MOD_DIR."/include/mpb.form.inc.php";
-        $mpb_form->display();
+        $form['op'] = "salvar";*/
+        
+        include_once dirname(__DIR__) . '/include/mpb.form.inc.php';
+        $obj  = $mastoppublishcontent_handler->create();
+        $form = mastoppublish_getContentForm($obj);
+        $form->display();
         break;
     case "salvar":
         $mpu_classe = (isset($mpb_10_id) && $mpb_10_id > 0) ? new mpu_mpb_mpublish($mpb_10_id) : new mpu_mpb_mpublish();
@@ -53,12 +56,56 @@ switch ($op) {
         if (!$mpu_classe->store()) {
             redirect_header('content.php', 3, MPU_ADM_ERRO1);
         }else{
-            if((isset($mpb_10_id) && $mpb_10_id>0)) mpu_apagaPermissoes($mpb_10_id);
+            
+            $groupperm_handler = xoops_getHandler('groupperm');
+            
+            $perm_arr = array();
+            $perm_arr[] = 'grupos_perm';
+            
+            if (count($perm_arr) > 0) {
+                foreach ($perm_arr as $perm) {
+                    $criteria = new CriteriaCompo(new Criteria('gperm_name', $perm));
+                    $criteria->add(new Criteria('gperm_itemid', (int)$mpu_classe->getVar('mpb_10_id')));
+                    $criteria->add(new Criteria('gperm_modid', (int)$GLOBALS['xoopsModule']->getVar('mid')));
+                    if (isset($_REQUEST[$perm]) && is_array($_REQUEST[$perm])) {
+                        $perms = $groupperm_handler->getObjects($criteria);
+                        if (count($perms) > 0) {
+                            foreach (array_keys($perms) as $i) {
+                                $groups[$perms[$i]->getVar('gperm_groupid')] =& $perms[$i];
+                            }
+                        } else {
+                            $groups = array();
+                        }
+                        foreach ($_REQUEST[$perm] as $groupid) {
+                            $groupid = (int)$groupid;
+                            if (!isset($groups[$groupid])) {
+                                $perm_obj = $groupperm_handler->create();
+                                $perm_obj->setVar('gperm_name', $perm);
+                                $perm_obj->setVar('gperm_itemid', (int)$mpu_classe->getVar('mpb_10_id'));
+                                $perm_obj->setVar('gperm_modid', $GLOBALS['xoopsModule']->getVar('mid'));
+                                $perm_obj->setVar('gperm_groupid', $groupid);
+                                $groupperm_handler->insert($perm_obj);
+                                unset($perm_obj);
+                            }
+                        }
+                        $removed_groups = array_diff(array_keys($groups), $_REQUEST[$perm]);
+                        if (count($removed_groups) > 0) {
+                            $criteria->add(new Criteria('gperm_groupid', '(' . implode(',', $removed_groups) . ')', 'IN'));
+                            $groupperm_handler->deleteAll($criteria);
+                        }
+                        unset($groups);
+                    } else {
+                        $groupperm_handler->deleteAll($criteria);
+                    }
+                    unset($criteria);                    
+                }
+            }
+            /*if((isset($mpb_10_id) && $mpb_10_id > 0)) mpu_apagaPermissoes($mpb_10_id);
             if( !empty($grupos_perm) && count($grupos_perm) > 0 ){
                 mpu_inserePermissao($mpu_classe->getVar("mpb_10_id"),$grupos_perm);
-            }
-            redirect_header('content.php', 3, MPU_ADM_SUCESS1);
+            }*/
         }
+        redirect_header('content.php', 3, MPU_ADM_SUCESS1);
         break;
     case "listar_clone":
         $mpu_classe = new mpu_mpb_mpublish($mpb_10_id);
@@ -84,6 +131,14 @@ switch ($op) {
         }
         break;
     case "listar_editar":
+        $obj = $mastoppublishcontent_handler->get($_REQUEST['mpb_10_id']);
+        if (!$obj->getVar('mpb_10_id')) { //If no configs exist
+            redirect_header('content.php', 2, _PROFILE_AM_FIELDNOTCONFIGURABLE);
+        }
+        include_once dirname(__DIR__) . '/include/mpb.form.inc.php';
+        $form = mastoppublish_getContentForm($obj);
+        $form->display();
+        /*
         $mpu_classe = new mpu_mpb_mpublish($mpb_10_id);
         $cfi_classe = new mpu_cfi_contentfiles();
         if (!$mpu_classe->getVar('mpb_10_id')) {
@@ -92,7 +147,7 @@ switch ($op) {
         $form['titulo'] = MPU_ADM_EPAGE;
         $form['op'] = "salvar";
         include_once dirname(__DIR__) . '/include/mpb.form.inc.php';
-        $mpb_form->display();
+        $mpb_form->display();*/
         break;
     case "listar_deletar":
         $mpu_classe = new mpu_mpb_mpublish($mpb_10_id);

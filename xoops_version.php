@@ -18,7 +18,7 @@ $modversion['name'] 		= MPU_MOD_NOME;
 $modversion['version'] 		= 1.2;
 $modversion['description'] 	= MPU_MOD_DESC;
 
-$modversion['author']           = 'Fernando Santos, Daniel Wilden';
+$modversion['author']           = 'Fernando Santos (aka topet05), Daniel Wilden (aka dreamgaurd)';
 $modversion['credits']          = 'Daniel Wilden';
 $modversion['help']             = 'page=help';
 //$modversion['help']           = "help.html";

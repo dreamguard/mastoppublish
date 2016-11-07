@@ -568,7 +568,7 @@ class MastoppublishContentHandler extends XoopsPersistableObjectHandler
      */
     public function __construct(XoopsDatabase $db)
     {
-        parent::__construct($db, 'mpu_mpb_mpublish', 'mastop_publishcontent', 'mpb_10_id', 'mpb_30_titulo');
+        parent::__construct($db, 'mpu_mpb_mpublish', 'mastoppublishcontent', 'mpb_10_id', 'mpb_30_titulo');
     }
 
     /**

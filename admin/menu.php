@@ -33,21 +33,21 @@ $adminmenu[$i]['icon']  = $pathIcon32 . '/home.png';
 $adminmenu[$i]['title'] = MPU_MOD_MENU_ADD;
 //$adminmenu[$i]['link']  = 'admin/index.php?op=novo';
 $adminmenu[$i]['link']  = 'admin/content.php';
-$adminmenu[$i]['icon']  = $pathIcon32 . '/addlink.png';
+$adminmenu[$i]['icon']  = $pathIcon32 . '/folder_txt.png';
 
 ++$i;
 $adminmenu[$i]['title'] = MPU_MOD_MENU_LNK;
 $adminmenu[$i]['link']  = 'admin/paginas.php';
-$adminmenu[$i]['icon']  = $pathIcon32 . '/identity.png';
+$adminmenu[$i]['icon']  = $pathIcon32 . '/folder1_html.png';
 
 ++$i;
 $adminmenu[$i]['title'] = MPU_MOD_MENU_MED;
 $adminmenu[$i]['link']  = 'admin/media.php';
-$adminmenu[$i]['icon']  = $pathIcon32 . '/alert.png';
+$adminmenu[$i]['icon']  = $pathIcon32 . '/metagen.png';
 ++$i;
 $adminmenu[$i]['title'] = MPU_MOD_MENU_FIL;
 $adminmenu[$i]['link']  = 'admin/files.php';
-$adminmenu[$i]['icon']  = $pathIcon32 . '/stats.png';
+$adminmenu[$i]['icon']  = $pathIcon32 . '/upload.png';
 
 ++$i;
 $adminmenu[$i]['title'] = _AM_MODULEADMIN_ABOUT;

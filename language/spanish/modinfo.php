@@ -116,7 +116,7 @@ define("MPU_MOD_HIGHLIGHT_SEARCH", "<b style='color: red'>Se han resaltado los s
 
 // Administração - Menu
 define('MPU_MOD_MENU_ADD','Contenido');
-define('MPU_MOD_MENU_LNK','Ficheros HTML');
+define('MPU_MOD_MENU_LNK','HTML');
 define('MPU_MOD_MENU_LST','Gestionar Contenidos');
 define('MPU_MOD_MENU_MED','Medios');
 define('MPU_MOD_MENU_GER','Gestionar');

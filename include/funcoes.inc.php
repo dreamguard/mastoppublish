@@ -1,17 +1,17 @@
 <?php
 ### =============================================================
-### Mastop InfoDigital - Paixão por Internet
+### Mastop InfoDigital - PaixÃ£o por Internet
 ### =============================================================
-### Funções Padrão para o Módulo
+### FunÃ§Ãµes PadrÃ£o para o MÃ³dulo
 ### =============================================================
 ### Developer: Fernando Santos (topet05), fernando@mastop.com.br
-### Copyright: Mastop InfoDigital © 2003-2006
+### Copyright: Mastop InfoDigital Â© 2003-2006
 ### -------------------------------------------------------------
 ### www.mastop.com.br
 ### =============================================================
 ### $Id: funcoes.inc.php,v 1.2 2007/03/10 20:01:29 topet05 Exp $
 ### =============================================================
-// Administração
+// AdministraÃ§Ã£o
 function mpu_adm_menu(){
 	global $xoopsModule, $xoopsConfig, $xoopsModuleConfig;
 	$adm_url = XOOPS_URL."/modules/".MPU_MOD_DIR."/admin/";
@@ -80,12 +80,12 @@ function createjsDOMenu() {
 		xoops_error(sprintf(MPU_ADM_WYSIWYG_PATHERROR, XOOPS_ROOT_PATH.$xoopsModuleConfig['mpu_conf_wysiwyg_path']));
 	}
 }
-function mpu_apagaPermissoes($id){
+/*function mpu_apagaPermissoes($id){
 	global $xoopsModule, $moduleperm_handler;
 	$criteria = new CriteriaCompo();
 	$criteria->add(new Criteria('gperm_itemid', $id));
 	$criteria->add(new Criteria('gperm_modid', $xoopsModule->getVar('mid')));
-	$criteria->add(new Criteria('gperm_name', "mpu_mpublish_acesso"));
+	$criteria->add(new Criteria('gperm_name', 'mpu_mpublish_acesso'));
 	if( $old_perms =& $moduleperm_handler->getObjects($criteria) ){
 		foreach( $old_perms as $p ){
 			$moduleperm_handler->delete($p);
@@ -93,7 +93,7 @@ function mpu_apagaPermissoes($id){
 	}
 	xoops_comment_delete($xoopsModule->getVar('mid'), $id);
 	return true;
-}
+}*/
 
 function mpu_apagaPermissoesPai($id){
 	global $xoopsModule;
@@ -110,7 +110,7 @@ function mpu_apagaPermissoesPai($id){
 	return false;
 }
 
-function mpu_inserePermissao($id, $grupos_ids){
+/*function mpu_inserePermissao($id, $grupos_ids){
 	global $xoopsModule, $moduleperm_handler;
 	foreach( $grupos_ids as $gid ){
 		$perm =& $moduleperm_handler->create();
@@ -121,7 +121,7 @@ function mpu_inserePermissao($id, $grupos_ids){
 		$moduleperm_handler->insert($perm);
 	}
 	return true;
-}
+}*/
 
 function prepareContent($content){
 	global $xoopsUser, $xoopsConfig;
@@ -175,7 +175,7 @@ function prepareContent($content){
 	return $content;
 }
 
-// Módulo
+// MÃ³dulo
 
 
 ?>
